@@ -665,7 +665,7 @@ button, .govuk-button {
   padding-right: 0;
 }
 .govuk-table.cya .govuk-table__header, .govuk-table.cya .govuk-table__cell {
-  padding: 10px 20px 10px 0;
+  padding: 12px 20px 12px 0;
   border-bottom: 1px solid #cacaca;
   text-align: left;
   vertical-align: top;
@@ -682,6 +682,17 @@ button, .govuk-button {
 
 /* ================ END Table Styles ================ */
 
+/* ================ START Tab Styles ================ */
+
+.js-enabled .govuk-tabs__list-item {
+  background-color: #ededed; // Whisper $tpr-colour-whisper
+}
+
+.js-enabled .govuk-tabs__list-item--selected {
+  background-color: #fff;
+}
+
+/* ================ END Tab Styles ================ */
 
 /* ================ START Tag Styles ================ */
 
