@@ -1,17 +1,35 @@
 {% extends "includes/layout_svd_dashboard_2.html" %}
 
+{% block beforeContent %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+{{ govukBreadcrumbs({
+  collapseOnMobile: true,
+  items: [
+    {
+      text: "My schemes",
+      href: "./schemes_1.html"
+    }
+  ]
+}) }}
+
+{% endblock %}
+
 {% block content %}
 
 
 <div class="govuk-grid-row">
+  <div class="pageTitleContainer">
+      <h1 id="bott-mar" class="govuk-heading-l">Pension Scheme PSR 10965738</h1>
+    </div>
+  {# <h1 class="govuk-heading-xl">Pension Scheme PSR 10965738</h1> #}
     <div class="govuk-grid-column-two-thirds">
                 
         <!--
         <span class="govuk-caption-m">Acme Limited (PSR 12010256)</span>
         -->
-
-        <h1 class="govuk-heading-xl" style="margin-bottom: 20px;margin-top: 10px;">Pension Scheme PSR 10965738</h1>
-
+        
         <h2 class="govuk-heading-m" style="margin-bottom: 10px;margin-top: 20px;">Manage submissions</h2>
 
         <div class="govuk-tabs" data-module="govuk-tabs" style="margin-top: 30px;">
@@ -56,7 +74,7 @@
                   </td>
                   <td class="govuk-table__cell">14 August 22</td>
                   <td class="govuk-table__cell">Chris Hill</td>
-                  <td class="govuk-table__cell" style="text-align:left;"><strong class="govuk-tag">UPDATING</strong></td>
+                  <td class="govuk-table__cell cell-right"><strong class="tpr-tag tpr-tag--quartz">Updating</strong></td>
                 </tr>
                 <tr class="govuk-table__row">
                   <td class="govuk-table__cell">
@@ -64,7 +82,7 @@
                   </td>
                   <td class="govuk-table__cell">25 July 21</td>
                   <td class="govuk-table__cell">Susan Peterson</td>
-                  <td class="govuk-table__cell" style="text-align:Lleft;"><strong class="govuk-tag govuk-tag--green">COMPLETED</strong></td>
+                  <td class="govuk-table__cell cell-right"><strong class="tpr-tag">Completed</strong></td>
                 </tr>
                 <tr class="govuk-table__row">
                   <td class="govuk-table__cell">
@@ -72,7 +90,7 @@
                   </td>
                   <td class="govuk-table__cell">06 September 20</td>
                   <td class="govuk-table__cell">Chris Hill</td>
-                  <td class="govuk-table__cell" style="text-align:Lleft;"><strong class="govuk-tag govuk-tag--green">COMPLETED</strong></td>
+                  <td class="govuk-table__cell cell-right"><strong class="tpr-tag">Completed</strong></td>
                 </tr>
                 <tr class="govuk-table__row">
                   <td class="govuk-table__cell">
@@ -80,7 +98,7 @@
                   </td>
                   <td class="govuk-table__cell">27 August 19</td>
                   <td class="govuk-table__cell">Jonathan Cugart-Smith</td>
-                  <td class="govuk-table__cell" style="text-align:Lleft;"><strong class="govuk-tag govuk-tag--green">COMPLETED</strong></td>
+                  <td class="govuk-table__cell cell-right"><strong class="tpr-tag">Completed</strong></td>
                 </tr>
                 <tr class="govuk-table__row">
                   <td class="govuk-table__cell">
@@ -88,7 +106,7 @@
                   </td>
                   <td class="govuk-table__cell">18 July 18</td>
                   <td class="govuk-table__cell">Chris Hill</td>
-                  <td class="govuk-table__cell" style="text-align:Lleft;"><strong class="govuk-tag govuk-tag--green">COMPLETED</strong></td>
+                  <td class="govuk-table__cell cell-right"><strong class="tpr-tag">Completed</strong></td>
                 </tr>
                 <tr class="govuk-table__row">
                   <td class="govuk-table__cell">
@@ -96,7 +114,7 @@
                   </td>
                   <td class="govuk-table__cell">09 September 17</td>
                   <td class="govuk-table__cell">Alicia Coward</td>
-                  <td class="govuk-table__cell" style="text-align:Lleft;"><strong class="govuk-tag govuk-tag--green">COMPLETED</strong></td>
+                  <td class="govuk-table__cell cell-right"><strong class="tpr-tag">Completed</strong></td>
                 </tr>
                 <tr class="govuk-table__row">
                   <td class="govuk-table__cell">
@@ -104,7 +122,7 @@
                   </td>
                   <td class="govuk-table__cell">13 August 16</td>
                   <td class="govuk-table__cell">Amanda Eriksen</td>
-                  <td class="govuk-table__cell" style="text-align:Lleft;"><strong class="govuk-tag govuk-tag--green">COMPLETED</strong></td>
+                  <td class="govuk-table__cell cell-right"><strong class="tpr-tag">Completed</strong></td>
                 </tr>
                 <tr class="govuk-table__row">
                   <td class="govuk-table__cell">
@@ -112,7 +130,7 @@
                   </td>
                   <td class="govuk-table__cell">25 September 15</td>
                   <td class="govuk-table__cell">Edgar Wicking</td>
-                  <td class="govuk-table__cell" style="text-align:Lleft;"><strong class="govuk-tag govuk-tag--green">COMPLETED</strong></td>
+                  <td class="govuk-table__cell cell-right"><strong class="tpr-tag">Completed</strong></td>
                 </tr>
               </tbody>
             </table>
@@ -205,34 +223,44 @@
               </thead>
               <tbody class="govuk-table__body">
                 <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><a href="svd_dashboard_1.html" style="text-decoration: none;color:#1d70b8;">87454207</a></td>
+                  <td class="govuk-table__cell">
+                    <a href="svd_dashboard_1.html">87454207</a>
+                  </td>
                   <td class="govuk-table__cell">27 February 22</td>
                   <td class="govuk-table__cell">Peter McQueen</td>
-                  <td class="govuk-table__cell" style="text-align:left;"><strong class="govuk-tag">UPDATING</strong></td>
+                  <td class="govuk-table__cell"><strong class="tpr-tag tpr-tag--quartz">Updating</strong></td>
                 </tr>
                 <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><a href="#0" style="text-decoration: none;color:#1d70b8;">24863614</a></td>
+                  <td class="govuk-table__cell">
+                    <a href="#0">24863614</a>
+                  </td>
                   <td class="govuk-table__cell">04 Marc 21</td>
                   <td class="govuk-table__cell">Barbara Sunderland</td>
-                  <td class="govuk-table__cell" style="text-align:Lleft;"><strong class="govuk-tag govuk-tag--green">COMPLETED</strong></td>
+                  <td class="govuk-table__cell"><strong class="tpr-tag">Completed</strong></td>
                 </tr>
                 <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><a href="#0" style="text-decoration: none;color:#1d70b8;">56936523</a></td>
+                  <td class="govuk-table__cell">
+                    <a href="#0">56936523</a>
+                  </td>
                   <td class="govuk-table__cell">16 February 20</td>
                   <td class="govuk-table__cell">Mike Sugar-Love </td>
-                  <td class="govuk-table__cell" style="text-align:Lleft;"><strong class="govuk-tag govuk-tag--green">COMPLETED</strong></td>
+                  <td class="govuk-table__cell"><strong class="tpr-tag">Completed</strong></td>
                 </tr>
                 <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><a href="#0" style="text-decoration: none;color:#1d70b8;">890462345</a></td>
+                  <td class="govuk-table__cell">
+                    <a href="#0">890462345</a>
+                  </td>
                   <td class="govuk-table__cell">08 January 19</td>
                   <td class="govuk-table__cell">Edmund Collins</td>
-                  <td class="govuk-table__cell" style="text-align:Lleft;"><strong class="govuk-tag govuk-tag--green">COMPLETED</strong></td>
+                  <td class="govuk-table__cell"><strong class="tpr-tag">Completed</strong></td>
                 </tr>
                 <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><a href="#0" style="text-decoration: none;color:#1d70b8;">90365487</a></td>
+                  <td class="govuk-table__cell">
+                    <a href="#0">90365487</a>
+                  </td>
                   <td class="govuk-table__cell">21 March 18</td>
                   <td class="govuk-table__cell">Jane johnson-Bestford</td>
-                  <td class="govuk-table__cell" style="text-align:Lleft;"><strong class="govuk-tag govuk-tag--green">COMPLETED</strong></td>
+                  <td class="govuk-table__cell"><strong class="tpr-tag">Completed</strong></td>
                 </tr>
               </tbody>
             </table>
@@ -250,33 +278,33 @@
             <table class="govuk-table cya">
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
-                  <th scope="col" class="govuk-table__header">Data valuation templates</th>
+                  <th scope="col" class="govuk-table__header">Valuation Data templates</th>
                   <th scope="col" class="govuk-table__header">Updated on</th>
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
                 <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><a href="#0" aria-describedby="a" style="text-decoration: none;color:#1d70b8;font-weight: 400;">Download Actuarial Data (AC)</a></td>
+                  <td class="govuk-table__cell"><a href="#0" aria-describedby="a">Download Actuarial Data (AC)</a></td>
                   <td class="govuk-table__cell">27/02/2020</td>
                 </tr>
                 <tr class="govuk-table__row">
-                 <td class="govuk-table__cell"><a href="#0" aria-describedby="a" style="text-decoration: none;color:#1d70b8;font-weight: 400;">Download Covenant Data (CD)</a></td>
+                 <td class="govuk-table__cell"><a href="#0" aria-describedby="a">Download Covenant Data (CD)</a></td>
                   <td class="govuk-table__cell">27/02/2020</td>
                 </tr>
                 <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><a href="#0" aria-describedby="a" style="text-decoration: none;color:#1d70b8;font-weight: 400;">Download Recovery Plan (RP)</a></td>
+                  <td class="govuk-table__cell"><a href="#0" aria-describedby="a">Download Recovery Plan (RP)</a></td>
                   <td class="govuk-table__cell">13/11/2019</td>
                 </tr>
                 <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><a href="#0" aria-describedby="a" style="text-decoration: none;color:#1d70b8;font-weight: 400;">Download Funding and Investment Strategy (FIS)</a></td>
+                  <td class="govuk-table__cell"><a href="#0" aria-describedby="a">Download Funding and Investment Strategy (FIS)</a></td>
                   <td class="govuk-table__cell">27/02/2020</td>
                 </tr>
                 <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><a href="#0" aria-describedby="a" style="text-decoration: none;color:#1d70b8;font-weight: 400;">Download Actuarial Valuation (AV)</a></td>
+                  <td class="govuk-table__cell"><a href="#0" aria-describedby="a">Download Actuarial Valuation (AV)</a></td>
                   <td class="govuk-table__cell">06/04/2020</td>
                 </tr>
                 <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><a href="#0" aria-describedby="a" style="text-decoration: none;color:#1d70b8;font-weight: 400;">Download Schedule of Contribution (SC)</a></td>
+                  <td class="govuk-table__cell"><a href="#0" aria-describedby="a">Download Schedule of Contribution (SC)</a></td>
                   <td class="govuk-table__cell">06/04/2020</td>
                 </tr>
               </tbody>
